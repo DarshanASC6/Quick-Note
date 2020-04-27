@@ -6,14 +6,12 @@ userInput = input("")
 content = input("")
 # All of this should be done via a single input
 # Ex: if user chooses name, change name of document; or else user edits content
-
 if docName == "":
     docName = "Untitled"
 
-w = open(docName + ".txt", "r+")
+w = open(docName + ".txt", "w+")
 
 if userInput == "Edit":
-# What the hell is this and why the hell does it work?
     w.writelines(content)
 
 if userInput == "Change Doc Name":
@@ -22,8 +20,6 @@ if userInput == "Change Doc Name":
 
 if userInput == "Close Document":
     w.close()
-# This doesn't work. This should close the document without making any changes.
 
-# I really want to rewrite the above to be more flexible
 
 w.close()
