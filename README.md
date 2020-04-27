@@ -1,2 +1,3 @@
-# Document-Editor
- Python based document editor
+# Quick-Note
+Python script for quickly generating notes
+
