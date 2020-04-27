@@ -1,8 +1,9 @@
 # Have the user enter specific words
 # Then have the script create and write to a new document
+import os
 
 docName = input("Quick Note: ")
-userInput = input("content: ")
+content = input("content: ")
 # All of this should be done via a single input
 # Ex: if user chooses name, change name of document; or else user edits content
 if docName == "":
@@ -10,10 +11,8 @@ if docName == "":
 
 w = open(docName + ".txt", "w+")
 
-w.writelines(userInput)
 
-if userInput == "Change Doc Name":
-    userInput = input("")
-    docName = userInput
+w.writelines(content)
+# Open this note in 
 
 w.close()
