@@ -1,18 +1,23 @@
-# Have the user enter specific words
-# Then have the script create and write to a new document
 import os
+import sys
 
 docName = input("Quick Note: ")
-content = input("content: ")
-# All of this should be done via a single input
-# Ex: if user chooses name, change name of document; or else user edits content
+content = input("Content: ")
+# editor = input("Open in: ")
+
 if docName == "":
     docName = "Untitled"
+#Will ensure that there isn't a doc called ".txt" 
 
 w = open(docName + ".txt", "w+")
 
-
 w.writelines(content)
-# Open this note in 
-
+# Open this note in notepad
 w.close()
+
+# if editor == "openw":
+#     print()
+# # print out various editors available based on the os
+
+os.system("notepad " + docName + ".txt")
+# opens the note in text editor of choice
